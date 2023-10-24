@@ -2,6 +2,9 @@
   align-items: center;
   align-content: stretch;
   justify-content: stretch;
+  @media(max-width:599px){
+    flex-direction: column-reverse;
+  }
 }
 
 .pattern-left {
@@ -27,6 +30,9 @@
         height: 35px;
       }
     }
+  }
+  @media(max-width:599px){
+    gap: 10px;
   }
 }
 
@@ -56,5 +62,21 @@ h3 {
       background-size: cover;
       background-position: center;
     }
+  }
+}
+
+.item-banner-opt{
+  box-sizing: border-box;
+  b{
+    width: 100%;
+    padding: 10px 0 0;
+  }
+  @media(max-width:599px){
+    width: 45%;
+    text-align: center;
+  }
+  @media(max-width: 320px){
+    width: 100%;
+    text-align: center;
   }
 }
