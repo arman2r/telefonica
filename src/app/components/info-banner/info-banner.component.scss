@@ -7,7 +7,10 @@
     padding: 20px 60px;
   }
   .video{
-    height: 300px;
+    width: 100%;
+    @media(min-width:992px){
+      height: 300px;
+    }
     cursor: pointer;
     box-shadow: none;
     background-color: #fff;

@@ -3,13 +3,99 @@
   <app-plans></app-plans>
   <app-banner-with-options></app-banner-with-options>
   <ng-container *ngFor="let bannerTxt of infoBnner; index as i">
-    <app-info-banner [description]="bannerTxt" *ngIf="i === 0"></app-info-banner>
+    <app-info-banner
+      [description]="bannerTxt"
+      *ngIf="i === 0"
+    ></app-info-banner>
   </ng-container>
-  <div class="flex-wrap align-center justify-center medium-padding-y mediumGap" style="padding-bottom: 0 !important;">
+  <div
+    class="flex-wrap align-center justify-center medium-padding-y mediumGap"
+    style="padding-bottom: 0 !important; margin-bottom: 40px"
+  >
     <img src="/assets/images/disney-logo.png" alt="disney" />
     <img src="/assets/images/starplus-logo.png" alt="disney" />
   </div>
   <ng-container *ngFor="let bannerTxt of infoBnner; index as i">
-    <app-info-banner [description]="bannerTxt" *ngIf="i === 1"></app-info-banner>
+    <app-info-banner
+      [description]="bannerTxt"
+      *ngIf="i === 1"
+    ></app-info-banner>
   </ng-container>
+  <section class="flex-column align-center justify-center bg-second">
+    <div class="container align-center justify-center">
+      <div
+        class="help-container flex-wrap mediumGap rounded-shadow medium-padding-y medium-padding-x medium-margin-y"
+      >
+        <div class="flex-column item-help align-center justify-center">
+          <img src="/assets/images/router-icon.png" alt="router" />
+          <p class="medium-margin-y medium-padding-x">
+            Señales Wifi, Amplificador con dos señales: WiFi(2,4 Ghz) y WiFi
+            plus (5Ghz)
+          </p>
+        </div>
+        <div class="flex-column item-help align-center justify-center">
+          <img src="/assets/images/speed-icon.png" alt="speed" />
+          <p class="medium-margin-y medium-padding-x">
+            Velocidad Plus: La señal WiFi Plus te dará máxima velocidad.
+          </p>
+        </div>
+        <div class="flex-column item-help align-center justify-center">
+          <img src="/assets/images/world-icon.png" alt="world" />
+          <p class="medium-margin-y medium-padding-x">
+            Antena WiFi de alta gama: La señal WiFi Plus te permitirá distribuir
+            y conectar más dispositivos
+          </p>
+        </div>
+        <div class="flex-column item-help align-center justify-center">
+          <img src="/assets/images/shield-icon.png" alt="shield" />
+          <p class="medium-margin-y medium-padding-x">
+            Fácil configuración: Amplificador compatible con todos los módems.
+            Conectado por cable ethernet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex-column align-center justify-center bg-second">
+    <div class="container align-center justify-center">
+      <div
+        class="help-container space-between flex-wrap mediumGap rounded-shadow medium-padding-y medium-padding-x medium-margin-y content-qr"
+      >
+        <div
+          class="flex-column align-center justify-center rounded-shadow qr medium-margin-x"
+        >
+          <img src="/assets/images/qr.jpg" alt="qr" />
+        </div>
+
+        <div class="d-flex flex-wrap medium-item">
+          <img
+            src="/assets/images/min-movistar.png"
+            alt="movistar"
+            style="height: 40px; width: 40px"
+          />
+          <div class="small-padding-x txt-descript">
+            <h4>Adquiere tu repetidor <b>desde la App Movistar</b></h4><br />
+            <sub
+              >Descarga la App y óbten tu repetidor de forma fácil en sencillos
+              pasos</sub
+            >
+            <div class="flex-wrap smallGap small-padding-y img-platforms">
+              <img src="/assets/images/appstore-image.png" alt="appstore" />
+              <img
+                src="/assets/images/googleplay-image.png"
+                alt="google play"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="img-person-promo">
+          <img src="/assets/images/happy-illustration.png" alt="happy client">
+        </div>
+
+      </div>
+    </div>
+  </section>
 </div>
+<app-opinions></app-opinions>

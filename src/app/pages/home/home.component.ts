@@ -4,6 +4,7 @@ import { PlansComponent } from "../../components/plans/plans.component";
 import { BannerWithOptionsComponent } from 'src/app/components/banner-with-options/banner-with-options.component';
 import { InfoBannerComponent } from 'src/app/components/info-banner/info-banner.component';
 import { CommonModule } from '@angular/common';
+import { OpinionsComponent } from 'src/app/components/opinions/opinions.component';
 
 const bannerInfo = [
   {
@@ -29,7 +30,7 @@ const bannerInfo = [
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     standalone: true,
-    imports: [CommonModule, BannerComponent, PlansComponent, BannerWithOptionsComponent, InfoBannerComponent]
+    imports: [CommonModule, BannerComponent, PlansComponent, BannerWithOptionsComponent, InfoBannerComponent, OpinionsComponent]
 })
 export class HomeComponent {
   infoBnner = bannerInfo

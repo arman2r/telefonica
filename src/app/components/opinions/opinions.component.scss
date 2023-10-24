@@ -1,0 +1,55 @@
+.pattern-commits{
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.title-commits{
+  font-size: 2rem;
+  @media(max-width:991px){
+    font-size: 1.6rem;
+  }
+  text-align: center;
+  font-weight: 500;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.item-commit {
+  background-image: url(/assets/images/bg-commit.png);
+  background-repeat: no-repeat;
+  background-position: bottom start;
+  background-size: auto 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  @media(min-width: 992px){
+    width: 50%;
+  }
+  @media(max-width: 991px){
+    align-items: start;
+    margin-bottom: 20px;
+    background-size: auto 150px;
+  }
+  .image-user {
+    margin: 0 15px;
+    img {
+      border-radius: 10px;
+      @media(max-width:991px){
+        width: 50px;
+      }
+    }
+  }
+  h5{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  sub{
+    font-size: .7rem;
+  }
+  article{
+    font-size: .8rem;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
