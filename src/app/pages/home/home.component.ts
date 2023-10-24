@@ -13,7 +13,8 @@ const bannerInfo = [
     'description':'',
     'link': true,
     'image': '/assets/images/enjoy-image.png',
-    'bg': false
+    'bg': false,
+    'direction': 'lr'
   },
   {
     'title': 'Amplia tu señal de Wifi en toda tu casa con nuestro repetidor Wifi plus',
@@ -21,7 +22,8 @@ const bannerInfo = [
     'description':'Adquiérelo con tu plan o solicita uno a través de la App Mi Movistar',
     'link': false,
     'image': '/assets/images/aeroband-image.png',
-    'bg': true
+    'bg': true,
+    'direction': 'rl'
   }
 ]
 

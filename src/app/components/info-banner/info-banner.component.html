@@ -1,5 +1,7 @@
+
+{{description.direction === 'rl'}}
 <section class="d-flex align-center justify-center big-padding-y" [ngClass]="{'bg-second':description.bg}" style="padding-bottom: 0px !important;">
-  <div class="container flex-wrap justify-center big-padding-y" style="box-sizing: border-box;padding-bottom: 0px !important">
+  <div class="container flex-wrap justify-center big-padding-y" style="box-sizing: border-box;padding-bottom: 0px !important" [ngClass]="{'orientation': description.direction === 'rl'}">
     <div class="right-pattern">
       <div class="video rounded-shadow" [style.background-image]="'url(' + description.image + ')'"></div>
     </div>
