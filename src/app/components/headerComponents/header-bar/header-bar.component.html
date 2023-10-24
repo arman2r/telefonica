@@ -18,12 +18,12 @@
     <div class="container align-center">
       <button
         mat-icon-button
-        class="example-icon"
+        class="example-icon menu"
         aria-label="Example icon-button with menu icon"
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <span><img src="/assets/images/m-logo.png" alt="movistar logo"></span>
+      <span class="logo-header"><img src="/assets/images/m-logo.png" alt="movistar logo"></span>
       <div class="menu-items">
         <ng-container *ngFor="let menu of allMenuItems">
           <app-menu [btnProperty]="menu"></app-menu>

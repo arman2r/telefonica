@@ -21,6 +21,18 @@
   }
 }
 
+button.menu{
+  display: flex;
+  @media(min-width:992px){
+    display: none;
+  }
+}
+
+.logo-header{
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
 .navbar-menu{
   background-color: white;
   position: sticky;
