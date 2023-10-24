@@ -1,0 +1,15 @@
+<div>
+  <app-banner></app-banner>
+  <app-plans></app-plans>
+  <app-banner-with-options></app-banner-with-options>
+  <ng-container *ngFor="let bannerTxt of infoBnner; index as i">
+    <app-info-banner [description]="bannerTxt" *ngIf="i === 0"></app-info-banner>
+  </ng-container>
+  <div class="flex-wrap align-center justify-center medium-padding-y mediumGap" style="padding-bottom: 0 !important;">
+    <img src="/assets/images/disney-logo.png" alt="disney" />
+    <img src="/assets/images/starplus-logo.png" alt="disney" />
+  </div>
+  <ng-container *ngFor="let bannerTxt of infoBnner; index as i">
+    <app-info-banner [description]="bannerTxt" *ngIf="i === 1"></app-info-banner>
+  </ng-container>
+</div>

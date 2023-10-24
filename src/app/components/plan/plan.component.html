@@ -1,0 +1,76 @@
+<div class="plan big-padding-y small-padding-x rounded-shadow">
+  <h3>{{ planDetail.nameSubPlan }}</h3>
+  <sub>{{ planDetail.subtitle }}</sub>
+  <br /><br />
+  <h4 class="service-mbs">{{ planDetail.serviceMbs }}</h4>
+  <sub class="f-11">Velocidad simétrica</sub>
+  <br />
+  <br />
+  <div class="flex-row align-center price">
+    <h5>S/</h5>
+    <h4>
+      <b
+        ><span class="big-price">{{ planDetail.price.slice(0, 2) }}</span
+        ><span>.{{ planDetail.price.slice(3, 5) }}</span> x
+        {{ planDetail.quantityMounth }}</b
+      >
+    </h4>
+  </div>
+  <p style="margin-top: -5px !important">
+    Precio regular S/{{ planDetail.beforePrice }}
+  </p>
+  <div class="medium-margin-y">
+    <p style="font-size: 1.2rem">Instalación {{ planDetail.installPrice }}</p>
+    <p>*{{ planDetail.requiredInstall }}</p>
+  </div>
+
+  <button class="small-margin-y" mat-fab extended>Comprar en línea</button>
+  <button mat-fab extended>Llámame ahora</button>
+  <div class="medium-margin-y">
+    <p>Apps ilimitadas x 12 meses*</p>
+    <ul class="flex-row justify-center align-center smallGap small-padding-y">
+      <li *ngFor="let red of planDetail.apps">
+        <img [src]="red.image" [alt]="red.image" />
+      </li>
+    </ul>
+  </div>
+  <ul class="promos">
+    <li
+      *ngIf="planDetail.promo"
+      class="flex-column smallGap align-center justify-center"
+    >
+      <h4><b>¡Imperdible!</b></h4>
+      <h5><b>BONO 1000 Mbps</b><b>x 2 meses</b></h5>
+    </li>
+    <li
+      *ngIf="planDetail.promo2"
+      class="flex-row align-center justify-center promo-gb"
+    >
+      <div class="flex-wrap align-center justify-center">
+        <img src="assets/images/tiktok-icon.png" alt="tiktok" />
+        <h3 class="t-quantity">30GB</h3>
+        <sub class="t-subtitle" style="width: 100%">de TikTok x 3 meses</sub>
+      </div>
+      <div class="flex-column end-quantity">
+        <h3 class="t-q">Duplica <b>GB</b></h3>
+        <p>x 6 meses</p>
+      </div>
+    </li>
+    <li
+      *ngIf="planDetail.promo3"
+      class="flex-wrap align-center justify-center promo-prime"
+    >
+      <div>
+        <img src="assets/images/prime-logo.png" alt="prime plus" />
+      </div>
+      <div class="flex-column align-center justify-center">
+        <b>Incluido</b>
+        <p>3 meses gratis</p>
+      </div>
+    </li>
+  </ul>
+  <div class="flex-row txt-end-card">
+    <img src="assets/images/fibra-icon.png" height="20px" alt="fibra" />
+    <p>{{ planDetail.txtInfoEnd }}</p>
+  </div>
+</div>

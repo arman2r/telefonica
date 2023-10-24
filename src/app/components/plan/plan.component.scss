@@ -1,0 +1,123 @@
+.plan {
+  button {
+    width: 100%;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  h3:first-child {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .service-mbs {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: -5px;
+  }
+  sub {
+    color: rgb(52, 52, 52);
+  }
+  .f-11 {
+    font-size: 0.9rem;
+  }
+}
+
+.price {
+  align-items: end;
+  justify-content: center;
+  h5 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: flex;
+    margin: -50px 0 5px 0 !important;
+  }
+  .big-price {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+}
+
+.promos {
+  li {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    &:first-child h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    &:first-child h5 {
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.txt-end-card {
+  text-align: left;
+  font-size: 0.85rem;
+  background: -webkit-linear-gradient(#272729, #7a7a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #313235;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.promo-gb {
+  div {
+    width: 50%;
+    position: relative;
+    box-sizing: border-box;
+    &:first-child {
+      padding-right: 5px;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #cccdce;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        top: 0;
+        width: 1px;
+        height: 60%;
+      }
+    }
+    &:last-child{
+      padding-left: 0px;
+    }
+  }
+  img {
+    width: 18px;
+    margin-right: 2px;
+  }
+  .t-quantity {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-bottom: -3px;
+  }
+  .t-subtitle {
+    font-size: 0.52rem;
+    margin: 5px 0;
+  }
+  .end-quantity {
+    h3.t-q {
+      font-size: 0.75rem !important;
+      font-weight: lighter;
+    }
+  }
+}
+
+.promo-prime{
+  div{
+    width: 50%;
+    text-align: center;
+    p{
+      font-size: .7rem;
+    }
+  }
+}

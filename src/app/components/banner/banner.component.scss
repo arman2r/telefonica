@@ -1,0 +1,77 @@
+.principal-banner {
+  width: 100%;
+  color: white;
+  min-height: 500px;
+  h1 {
+    font-size: 2rem;
+  }
+  h1,
+  h2 {
+    font-weight: 400;
+    width: 80%;
+    margin:auto
+  }
+  .subtitle-h3 {
+    font-size: 1.5rem;
+    width: 80%;
+    margin:auto
+  }
+  .tipe-money {
+    width: 65px;
+  }
+  .money {
+    margin-left: -10px;
+    width: 120px;
+  }
+  &.bg-banner-prim {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+  }
+  @media (min-width: 992px) {
+    min-height: 380px;
+    h1{
+      font-size: 3rem;
+    }
+  }
+  @media(max-width:991px){
+    h2{
+      font-size: 1.2rem;
+    }
+    .text-animated{
+      margin: 20px 0;
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
+    article{
+      margin-top: -100px !important;
+    }
+  }
+}
+.cobertura-item {
+  article {
+    max-width: 450px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  @media(max-width:991px){
+    margin: -140px 20px 0;
+    border-radius: 15px !important;
+    .content-img{
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}

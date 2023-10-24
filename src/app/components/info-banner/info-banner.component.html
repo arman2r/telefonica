@@ -1,0 +1,17 @@
+<section class="d-flex align-center justify-center big-padding-y" [ngClass]="{'bg-second big-margin-y':description.bg}" style="padding-bottom: 0px !important;">
+  <div class="container flex-wrap justify-center big-padding-y" style="box-sizing: border-box;padding-bottom: 0px !important">
+    <div class="right-pattern">
+      <div class="video rounded-shadow" [style.background-image]="'url(' + description.image + ')'"></div>
+    </div>
+    <div class="info-banenr justify-center flex-column">
+      <h3>{{description.title}}</h3>
+      <article class="medium-margin-y">
+        {{description.subtitle}}
+      </article>
+      <article *ngIf="description.description.length">
+        {{description.description}}
+      </article>
+      <a *ngIf="description.link" href="#" class="align-center">Selecciona un plan <mat-icon style="margin-top: 5px;">chevron_right</mat-icon></a>
+    </div>
+  </div>
+</section>

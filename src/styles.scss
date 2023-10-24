@@ -1,0 +1,227 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$movistarLp-primary: mat.define-palette(mat.$indigo-palette);
+$movistarLp-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$movistarLp-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$movistarLp-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $movistarLp-primary,
+      accent: $movistarLp-accent,
+      warn: $movistarLp-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($movistarLp-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.1px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 80%;
+}
+a {
+  cursor: pointer;
+}
+sub {
+  bottom: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+b {
+  letter-spacing: 0.5px;
+}
+ul,
+li {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+}
+
+.small-padding-y {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.small-padding-x {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.medium-padding-y {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.medium-padding-x {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.big-padding-y {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.big-padding-x {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/**** margin ***/
+
+.small-margin-y {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.small-margin-x {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.medium-margin-y {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.medium-margin-x {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.big-margin-y {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.big-margin-x {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/*** end margin ***/
+
+.d-flex {
+  display: flex;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.smallGap {
+  gap: 10px;
+}
+
+.mediumGap {
+  gap: 20px;
+}
+
+.bigGap {
+  gap: 30px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-end {
+  flex-direction: row-reverse;
+  .mat-icon {
+    margin-right: 0 !important;
+    margin-left: 8px !important;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.rounded-shadow {
+  border-radius: 15px !important;
+  -webkit-box-shadow: 0px 7px 21px 2px rgba(216, 219, 219, 1);
+  -moz-box-shadow: 0px 7px 21px 2px rgba(216, 219, 219, 1);
+  box-shadow: 0px 7px 21px 2px rgba(216, 219, 219, 1);
+}
+
+.bg-second {
+  background-color: #f6f6f6;
+}
+
+.flex-wrap-xs {
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,50 @@
+<header>
+  <nav class="nav-user-page justify-center">
+    <div class="container flex-between">
+      <ul>
+        <li>
+          <a><b>Personas</b></a>
+        </li>
+        <li><a>Empresas</a></li>
+      </ul>
+      <ul>
+        <a>Información a Abandonados y Usuarios</a>
+      </ul>
+    </div>
+  </nav>
+</header>
+<nav class="navbar-menu">
+  <mat-toolbar class="justify-center mat-elevation-z2">
+    <div class="container align-center">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span><img src="/assets/images/m-logo.png" alt="movistar logo"></span>
+      <div class="menu-items">
+        <ng-container *ngFor="let menu of allMenuItems">
+          <app-menu [btnProperty]="menu"></app-menu>
+        </ng-container>
+      </div>
+      <span class="example-spacer"></span>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</nav>
+<app-bread-crumb class="bread-crumb"></app-bread-crumb>

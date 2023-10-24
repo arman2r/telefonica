@@ -1,0 +1,76 @@
+<section class="align-center justify-center section-plans">
+  <div class="container mat-elevation-z8">
+    <mat-card>
+      <mat-card-content class="content-primary-planes">
+        <div
+          class="flex-wrap align-center justify-center smallGap content-btn-plans"
+        >
+          <button
+            *ngFor="let btnPlan of allPlans"
+            (click)="setPlan(btnPlan)"
+            class="btn-type-plan"
+            mat-fab
+            extended
+          >
+            {{ btnPlan.namePlan }}
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+<section>
+  <div class="flex-column align-center justify-center section-plans">
+    <div class="container mediumGap flex-wrap-xs">
+      <ng-container *ngFor="let plan of subPlanes; index as i">
+        <div class="justify-center">
+          <mat-chip-listbox
+            *ngIf="i === 1"
+            class="mat-mdc-chip-set-stacked chip-active"
+            aria-label="Color selection"
+          >
+            <mat-chip-option>
+              <div class="align-center justify-center">
+                <mat-icon>star</mat-icon> <span>MÁS VENDIDO</span>
+              </div>
+            </mat-chip-option>
+          </mat-chip-listbox>
+          <app-plan [planDetail]="plan"></app-plan>
+        </div>
+      </ng-container>
+    </div>
+    <br>
+    <div class="container big-margin-y">
+      <div class="flex-wrap align-center justify-center mediumGap pattern-items" style="width: 100%">
+        <h3 style="width: 100%" class="text-center small-margin-y title-planes">
+          Todos nuestros planes de internet Fibra Óptica <b>Tambien incluyen</b>
+        </h3>
+        <div
+          class="flex-row align-center justify-center medium-padding-y medium-padding-x rounded-shadow item-plan"
+        >
+          <img
+            src="/assets/images/smartwifi-icon.png"
+            alt="smart wifi"
+            class="small-margin-x"
+          />
+          <div class="flex-column small-margin-x">
+            <b>Módem Smart Wifi</b>
+            <p>2.4Ghz y 5Ghz</p>
+          </div>
+        </div>
+        <div
+          class="flex-row align-center justify-center medium-padding-y medium-padding-x rounded-shadow item-plan"
+        >
+          <img
+            src="/assets/images/smartwifi-icon.png"
+            alt="smart wifi"
+          />
+          <div class="flex-column small-margin-x">
+            <b>Sigue tu instalación</b>
+            <p>Puedes seguir tu instalación en linea</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
